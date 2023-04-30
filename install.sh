@@ -98,4 +98,6 @@ wget https://nixpoin.com/ChromeSetup.exe
 cp -f /tmp/net.bat net.bat
 cp -f /tmp/dpart.bat dpart.bat
 
-echo "reboot Rdp dulu mazzeh baru bisa pake"
+echo 'Your server will turning off in 3 second'
+sleep 3
+poweroff
