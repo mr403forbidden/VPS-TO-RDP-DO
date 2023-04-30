@@ -11,10 +11,10 @@ echo "[5] Untuk Memasukan Link GZ"
 read -p "Pilih [1]: " PILIH OS
 
 case "$PILIHOS" in
-	1|"") PILIHOS="https://nixpoin.sgp1.cdn.digitaloceanspaces.com/windows2019DO.gz";;
-	2) PILIHOS="https://nixpoin.sgp1.cdn.digitaloceanspaces.com/windows2016.gz";;
-	3) PILIHOS="https://nixpoin.sgp1.cdn.digitaloceanspaces.com/windows2012v2.gz";;
-	4) PILIHOS="https://nixpoin.sgp1.cdn.digitaloceanspaces.com/win10.gz";;
+	1|"") PILIHOS="https://archive.org/download/windows4vpsisorecoverrrq11/windows19.gz";;
+	2) PILIHOS="https://archive.org/download/windows4vpsisorecoverrrq11/windows16.gz";;
+	3) PILIHOS="https://archive.org/download/windows4vpsisorecoverrrq11/windows12.gz";;
+	4) PILIHOS="https://archive.org/download/windows4vpsisorecoverrrq11/windows10.gz";;
 	5) read -p "[?] Masukkan Link GZ mu : " PILIHOS;;
 	*) echo "[!] Pilihan salah"; exit;;
 esac
