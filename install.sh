@@ -98,5 +98,3 @@ cp -f /tmp/net.bat net.bat
 cp -f /tmp/dpart.bat dpart.bat
 
 echo 'Your server will turning off in 3 second'
-sleep 3
-poweroff
