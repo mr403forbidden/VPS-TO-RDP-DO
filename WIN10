@@ -1,13 +1,13 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
 apt-get update
-rm -rf w2016 w2016.img w2016.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
+rm -rf W10 W10.img W10.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
-wget -O w2016.gz https://go.aank.me/win/W2016-aank.gz
-gunzip w2016.gz
+wget -O W10.gz https://go.aank.me/win/W10-aank.gz
+gunzip W10.gz
 echo "Wait..."
 echo "I m Working Now.."
-mv w2016 w2016.img
+mv W10 W10.img
 wget -O ng.sh https://bit.ly/GCngr0k > /dev/null 2>&1
 chmod +x ng.sh
 ./ng.sh
@@ -29,7 +29,7 @@ echo Downloading files from aank.me
 apt-get install qemu-system-x86 -y
 echo "Wait..."
 echo "Starting Windows"
-qemu-system-x86_64 -hda w2016.img -m 8G -smp cores=40 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
+qemu-system-x86_64 -hda W10.img -m 8G -smp cores=40 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
 clear
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
